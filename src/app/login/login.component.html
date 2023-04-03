@@ -1,0 +1,32 @@
+<div class="main">
+    <div class="left">
+        <h1>WELCOME TO BANK</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aspernatur officiis, quo cumque minus, blanditiis ut distinctio dolorem fuga aut atque aliquam, molestiae hic odit facilis ea ab excepturi. Culpa!</p>
+    </div>
+    <div class="right">
+        
+        <div class="content">
+            <div class="icon">
+                <img src="../../assets/82c811a3afd73c763d57fe8e80cc1777.png" alt=""><br>
+                
+
+            </div><br><br>
+            <h4>{{aim}}</h4>
+            <form [formGroup]="loginForm">
+                <label for="" class="txt" id="reg_acno" >ACCOUNT NUMBER</label><br>
+                <input formControlName="acno" type="text" class="input"[placeholder]="accountNo"><br><br>
+                <div style="color: red;" *ngIf="this.loginForm.get('acno')?.errors && this.loginForm.get('acno')?.touched" >
+                    Invalid account number
+                </div>
+                <label for=""class="txt" id="reg_pswd">PASSWORD</label><br>
+                <input formControlName="pswd" type="password"class="input" [placeholder]="password"><br>  
+                <div style="color: red;" *ngIf="this.loginForm.get('pswd')?.errors && this.loginForm.get('pswd')?.touched" >
+                    Invalid password
+                </div>
+                <!-- //property binding (placeholder) -->
+                <button class="btn" (click)="login()">LOGIN</button><br><br>
+                <a href="">forgot password..?</a> &nbsp;<a routerLink="register">sign up</a>
+            </form>
+        </div>
+    </div>
+</div>

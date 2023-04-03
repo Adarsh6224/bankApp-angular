@@ -1,0 +1,22 @@
+.btn1{
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: red;
+    cursor: pointer;
+}
+.btn2{
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: green;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.main{
+    text-align: center;
+}

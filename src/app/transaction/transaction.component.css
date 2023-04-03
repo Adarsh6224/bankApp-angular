@@ -1,0 +1,33 @@
+h1{
+    margin-top: 250px;
+    text-align: center;
+    color: white;
+}
+.main{
+    text-align: center;
+    align-items: center;
+    max-width: 200px;
+    height: 100%;
+    min-height: 100px;
+    background-color: rgba(255, 255, 255, 0.212);
+    border-radius: 10px;
+    margin-left: 680px;
+    margin-top: 50px;
+}
+table{
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+table th,td{
+    padding-left: 20px;
+    padding-top: 3px;
+}
+a{
+    cursor: pointer;
+    margin-left: 700px;
+    color: black;
+    /* text-decoration: none; */
+    font-weight: bold;
+    font-size: 19px;
+}

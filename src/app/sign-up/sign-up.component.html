@@ -1,0 +1,28 @@
+<div class="main">
+            
+    <div class="content1">
+        <div class="icon">
+            <img src="../../assets/82c811a3afd73c763d57fe8e80cc1777.png" alt=""><br>
+
+        </div><br><br>
+        <form [formGroup]="registerForm">
+            <label for="" class="txt"id="reg_uname">USERNAME</label><br>
+            <input type="text" formControlName="uname" class="input"><br><br>
+            <div style="color: red;" *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched" >
+                Invalid username
+            </div>
+            <label for=""class="txt" id="reg_acno">ACCOUNT NUMBER</label><br>
+            <input type="text"  formControlName="acno" class="input"><br><br>
+            <div style="color: red;" *ngIf="this.registerForm.get('acno')?.errors && this.registerForm.get('acno')?.touched" >
+                Invalid account number
+            </div>
+            <label for=""class="txt"id="reg_pswd">PASSWORD</label><br>
+            <input type="password" formControlName="pswd"class="input"><br>
+            <div style="color: red;" *ngIf="this.registerForm.get('pswd')?.errors && this.registerForm.get('pswd')?.touched" >
+                Invalid password
+            </div>
+            <button class="btn" (click)="register()">SIGNUP</button><br><br>
+            <a routerLink="">sign in</a>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+
+<button class="logout_btn" (click)="logout()">LogOut</button>
+<button class="dlt_btn" (click)="delete()">Delete</button>
+<h1>Welcome {{user}}</h1>
+<h2>Date: {{sdate| date:'short'}}</h2>
+<a routerLink="/transaction">View Transaction History</a>
+<app-delete [item]="acno1" (OnCancel)="onCancel()"  (OnDelete)="onDelete($event)"></app-delete>
+<div [ngClass]="acno1 ? 'style1': ''" class="parent">
+    <div class="child">
+        <div class="content1">
+            <div class="icon">
+                <img src="../../assets/82c811a3afd73c763d57fe8e80cc1777.png" alt=""><br>
+            </div><br><br>
+            <form [formGroup]="depositForm">
+                <label for=""class="txt" id="dep_acno">ACCOUNT NUMBER</label><br>
+                <input type="text" formControlName="acno1" class="input"><br><br>
+                <div style="color: red;" *ngIf="this.depositForm.get('acno1')?.errors && this.depositForm.get('acno1')?.touched" >
+                    Invalid account number
+                </div>
+                <label for=""class="txt"id="dep_pswd">PASSWORD</label><br>
+                <input type="password" formControlName="pswd1"class="input"><br><br>
+                <div style="color: red;" *ngIf="this.depositForm.get('pswd1')?.errors && this.depositForm.get('pswd1')?.touched" >
+                    Invalid password
+                </div>
+                <label for="" class="txt"id="dep_uname">AMOUNT</label><br>
+                <input type="text" formControlName="amount" class="input"><br><br>
+                <div style="color: red;" *ngIf="this.depositForm.get('amount')?.errors && this.depositForm.get('amount')?.touched" >
+                    Invalid details
+                </div>
+                <button class="btn" (click)="deposit()">Deposit</button><br><br>
+            </form>
+    
+        </div>
+    </div>
+    <div class="child2">
+        <div class="content1">
+            <div class="icon">
+                <img src="../../assets/82c811a3afd73c763d57fe8e80cc1777.png" alt=""><br>
+    
+            </div><br><br>
+            <form [formGroup]="withdrawForm">
+                <label for=""class="txt" id="with_acno">ACCOUNT NUMBER</label><br>
+                <input type="text"  formControlName="acno2" class="input"><br><br>
+                <div style="color: red;" *ngIf="this.withdrawForm.get('acno2')?.errors && this.withdrawForm.get('acno2')?.touched" >
+                    Invalid account number
+                </div>
+                <label for=""class="txt"id="with_pswd">PASSWORD</label><br>
+                <input type="password" formControlName="pswd2"class="input"><br><br>
+                <div style="color: red;" *ngIf="this.withdrawForm.get('pswd2')?.errors && this.withdrawForm.get('pswd2')?.touched" >
+                    Invalid password
+                </div>
+                <label for="" class="txt"id="with_uname">AMOUNT</label><br>
+                <input type="text" formControlName="amount1" class="input"><br><br>
+                <div style="color: red;" *ngIf="this.withdrawForm.get('amount1')?.errors && this.withdrawForm.get('amount1')?.touched" >
+                    Invalid details
+                </div>
+                <button class="btn" (click)="withdraw()">Withdraw</button><br><br>
+            </form>
+        </div>
+    </div>
+</div>
+
